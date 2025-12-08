@@ -16,12 +16,6 @@ for await (const chunk of stream.textStream) {
 
 const finalText = await stream.text;
 
-// TODO: Replace this with a call to streamObject, passing:
-// - The model, same as above
-// - The prompt, asking for facts about the imaginary planet,
-//   passing in the finalText as the story
-// - The schema, which should be an object with a facts property
-//   that is an array of strings
 const factsResult = streamObject({
   model,
   prompt: `Give me some facts about the imaginary planet. Here's the story: ${finalText}`,
