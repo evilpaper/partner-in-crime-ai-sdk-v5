@@ -29,16 +29,16 @@ const DATA = [
   },
 ];
 
+const asMarkdown = DATA.map(
+  (item) => `- [${item.title}](${item.url})`,
+).join('\n');
+
 const asXML = DATA.map(
   (item) =>
     `<item url="${item.url}" title="${item.title}"></item>`,
 ).join('\n');
 
 const asJSON = JSON.stringify(DATA, null, 2);
-
-const asMarkdown = DATA.map(
-  (item) => `- [${item.title}](${item.url})`,
-).join('\n');
 
 console.log('Markdown tokens:', tokenize(asMarkdown).length);
 console.log(asMarkdown);
