@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import type { UIMessage } from 'ai';
 import type { MyUIMessage } from '../api/chat.ts';
 
 export const Wrapper = (props: {
